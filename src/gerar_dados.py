@@ -14,9 +14,9 @@ produtos = {
     "Teclado": ("Acessórios", 159.90),
     "Mouse": ("Acessórios", 89.90),
     "Headset": ("Acessórios", 229.90),
-    "Webcam": ("Acessórios", 279.90),
-    "Cadeira Office": ("Escritório", 749.90),
-    "Mesa Office": ("Escritório", 599.90),
+    "Webcam": ("Eletrônicos", 279.90),
+    "Cadeira": ("Escritório", 749.90),
+    "Mesa": ("Escritório", 599.90),
 }
 
 localidades = [
@@ -28,25 +28,25 @@ localidades = [
     ("Belo Horizonte", "MG"),
 ]
 
-pagamentos = ["Pix", "Cartão de Crédito", "Cartão de Débito", "Boleto"]
-inicio = date(2025, 1, 1)
-fim = date(2025, 12, 31)
+pagamentos = ["PIX", "Cartão de crédito", "Cartão de débito", "Boleto"]
+inicio = date(2026, 1, 1)
+fim = date(2026, 6, 30)
 dias = (fim - inicio).days
 
 linhas = []
-for id_venda in range(1, N_REGISTROS + 1):
+for numero in range(1, N_REGISTROS + 1):
     produto = random.choice(list(produtos))
     categoria, preco_base = produtos[produto]
     cidade, estado = random.choice(localidades)
     data_venda = inicio + timedelta(days=random.randint(0, dias))
     quantidade = random.choices([1, 2, 3, 4], weights=[65, 23, 9, 3])[0]
-    variacao = random.uniform(0.92, 1.08)
-    preco = round(preco_base * variacao, 2)
+    preco = round(preco_base * random.uniform(0.92, 1.08), 2)
 
     linhas.append(
         {
-            "id_venda": id_venda,
+            "pedido_id": f"PED{numero:04d}",
             "data": data_venda.isoformat(),
+            "cliente_id": f"CLI{random.randint(1, 850):03d}",
             "produto": produto,
             "categoria": categoria,
             "quantidade": quantidade,
@@ -56,11 +56,10 @@ for id_venda in range(1, N_REGISTROS + 1):
             "forma_pagamento": random.choices(
                 pagamentos, weights=[40, 38, 12, 10]
             )[0],
-            "cliente_id": f"C{random.randint(1, 850):04d}",
         }
     )
 
-df = pd.DataFrame(linhas).sort_values(["data", "id_venda"])
+df = pd.DataFrame(linhas).sort_values(["data", "pedido_id"])
 saida = Path(__file__).resolve().parents[1] / "data" / "vendas.csv"
 saida.parent.mkdir(parents=True, exist_ok=True)
 df.to_csv(saida, index=False, encoding="utf-8")
