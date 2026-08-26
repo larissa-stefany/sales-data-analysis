@@ -1,0 +1,51 @@
+pedido_id,data,cliente_id,produto,categoria,quantidade,preco_unitario,cidade,estado,forma_pagamento
+PED0001,2026-01-17,CLI011,Mesa,Escritório,2,687.29,Sorocaba,SP,Boleto
+PED0002,2026-02-06,CLI087,Notebook,Eletrônicos,4,3333.70,Sorocaba,SP,Cartão de débito
+PED0003,2026-04-03,CLI022,Mouse,Acessórios,2,117.52,Belo Horizonte,MG,Cartão de débito
+PED0004,2026-05-22,CLI055,Cadeira,Escritório,4,772.94,São Paulo,SP,Cartão de crédito
+PED0005,2026-01-17,CLI034,Headset,Acessórios,1,252.58,Belo Horizonte,MG,Boleto
+PED0006,2026-04-16,CLI017,Monitor,Eletrônicos,2,1015.56,Campinas,SP,PIX
+PED0007,2026-02-18,CLI066,Teclado,Acessórios,4,182.47,Curitiba,PR,PIX
+PED0008,2026-01-10,CLI101,Webcam,Eletrônicos,3,289.34,Indaiatuba,SP,Cartão de crédito
+PED0009,2026-03-15,CLI074,Mouse,Acessórios,1,125.40,São Paulo,SP,PIX
+PED0010,2026-06-01,CLI109,Notebook,Eletrônicos,1,3065.82,Campinas,SP,Cartão de crédito
+PED0011,2026-03-04,CLI093,Cadeira,Escritório,2,817.21,Sorocaba,SP,Boleto
+PED0012,2026-05-09,CLI048,Monitor,Eletrônicos,3,928.16,Belo Horizonte,MG,Cartão de débito
+PED0013,2026-01-30,CLI065,Mesa,Escritório,2,625.30,Indaiatuba,SP,PIX
+PED0014,2026-02-12,CLI058,Headset,Acessórios,4,236.40,Campinas,SP,Cartão de crédito
+PED0015,2026-06-18,CLI006,Webcam,Eletrônicos,1,329.13,São Paulo,SP,Boleto
+PED0016,2026-04-27,CLI112,Teclado,Acessórios,3,173.68,Sorocaba,SP,PIX
+PED0017,2026-03-22,CLI039,Mouse,Acessórios,2,114.61,Curitiba,PR,Cartão de débito
+PED0018,2026-05-14,CLI082,Notebook,Eletrônicos,2,3397.04,Indaiatuba,SP,Cartão de crédito
+PED0019,2026-01-06,CLI023,Monitor,Eletrônicos,4,987.45,Campinas,SP,Boleto
+PED0020,2026-06-24,CLI070,Cadeira,Escritório,1,736.25,Belo Horizonte,MG,PIX
+PED0021,2026-02-27,CLI019,Mesa,Escritório,3,662.81,São Paulo,SP,Cartão de débito
+PED0022,2026-03-09,CLI118,Headset,Acessórios,2,231.17,Sorocaba,SP,Cartão de crédito
+PED0023,2026-04-05,CLI041,Webcam,Eletrônicos,2,303.08,Curitiba,PR,PIX
+PED0024,2026-05-30,CLI060,Teclado,Acessórios,1,189.14,Indaiatuba,SP,Boleto
+PED0025,2026-01-19,CLI077,Mouse,Acessórios,4,121.72,Campinas,SP,Cartão de crédito
+PED0026,2026-02-20,CLI031,Notebook,Eletrônicos,3,3186.53,São Paulo,SP,PIX
+PED0027,2026-03-28,CLI094,Monitor,Eletrônicos,1,914.21,Sorocaba,SP,Cartão de débito
+PED0028,2026-04-12,CLI052,Cadeira,Escritório,2,802.67,Belo Horizonte,MG,Boleto
+PED0029,2026-05-04,CLI015,Mesa,Escritório,4,673.54,Curitiba,PR,PIX
+PED0030,2026-06-10,CLI106,Headset,Acessórios,3,246.79,Indaiatuba,SP,Cartão de crédito
+PED0031,2026-01-25,CLI068,Webcam,Eletrônicos,1,294.70,Campinas,SP,Cartão de débito
+PED0032,2026-02-03,CLI085,Teclado,Acessórios,2,177.85,São Paulo,SP,Boleto
+PED0033,2026-03-18,CLI027,Mouse,Acessórios,3,127.04,Sorocaba,SP,PIX
+PED0034,2026-04-21,CLI099,Notebook,Eletrônicos,2,3288.41,Belo Horizonte,MG,Cartão de crédito
+PED0035,2026-05-17,CLI044,Monitor,Eletrônicos,4,962.73,Curitiba,PR,Cartão de débito
+PED0036,2026-06-06,CLI113,Cadeira,Escritório,3,752.19,Indaiatuba,SP,Boleto
+PED0037,2026-01-12,CLI036,Mesa,Escritório,1,642.80,Campinas,SP,PIX
+PED0038,2026-02-25,CLI073,Headset,Acessórios,2,258.46,São Paulo,SP,Cartão de crédito
+PED0039,2026-03-31,CLI009,Webcam,Eletrônicos,4,317.72,Sorocaba,SP,Cartão de débito
+PED0040,2026-04-09,CLI120,Teclado,Acessórios,3,184.11,Belo Horizonte,MG,Boleto
+PED0041,2026-05-26,CLI057,Mouse,Acessórios,2,119.35,Curitiba,PR,PIX
+PED0042,2026-06-15,CLI024,Notebook,Eletrônicos,1,3422.16,Indaiatuba,SP,Cartão de crédito
+PED0043,2026-01-04,CLI088,Monitor,Eletrônicos,2,936.84,Campinas,SP,Cartão de débito
+PED0044,2026-02-16,CLI063,Cadeira,Escritório,4,819.42,São Paulo,SP,Boleto
+PED0045,2026-03-11,CLI032,Mesa,Escritório,3,611.55,Sorocaba,SP,PIX
+PED0046,2026-04-29,CLI104,Headset,Acessórios,1,228.63,Belo Horizonte,MG,Cartão de crédito
+PED0047,2026-05-07,CLI050,Webcam,Eletrônicos,2,325.04,Curitiba,PR,Cartão de débito
+PED0048,2026-06-28,CLI011,Teclado,Acessórios,4,170.92,Indaiatuba,SP,Boleto
+PED0049,2026-01-21,CLI079,Mouse,Acessórios,3,123.60,Campinas,SP,PIX
+PED0050,2026-02-08,CLI096,Notebook,Eletrônicos,2,3134.77,São Paulo,SP,Cartão de crédito
