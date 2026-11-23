@@ -72,6 +72,20 @@ Depois, execute as consultas presentes em `sql/consultas.sql` ou abra o notebook
 
 `Python` `SQL` `Pandas` `SQLite` `EDA` `ETL` `Data Visualization` `Business Analysis`
 
+## 🤖 Auditoria diária automatizada
+
+O GitHub Actions executa a auditoria da base sintética todos os dias às **07h17 (horário de Brasília; 10h17 UTC)**. O agendamento do GitHub Actions pode sofrer atrasos e depende de Actions estar habilitado e das permissões de escrita do repositório.
+
+- **Workflow:** [`.github/workflows/daily-audit.yml`](.github/workflows/daily-audit.yml)
+- **Código da auditoria:** [`src/daily_audit.py`](src/daily_audit.py)
+- **Resultados diários:** [`reports/daily/`](reports/daily/) (criados a partir da primeira execução)
+
+A rotina verifica campos obrigatórios, células vazias, duplicidades, quantidades/preços inválidos e datas. Também registra quantidade de pedidos, itens válidos, faturamento **simulado** e um hash SHA-256 da base. Compara o hash com o relatório anterior para indicar se os dados mudaram.
+
+O workflow cria um commit do usuário **github-actions[bot]** somente quando há um arquivo de relatório novo ou atualizado; repetir a execução no mesmo dia sem mudanças não cria outro commit. **Commits de auditoria automática não representam novas funcionalidades nem desenvolvimento manual** e devem ser diferenciados das contribuições técnicas em relatórios de evolução profissional.
+
+Para executar manualmente, abra a aba **Actions**, selecione **Auditoria diária de vendas** e clique em **Run workflow**. A rotina não precisa de pacotes externos: usa apenas a biblioteca padrão do Python.
+
 ---
 
 Desenvolvido como projeto de portfólio para consolidar conhecimentos em **Análise de Dados**.
