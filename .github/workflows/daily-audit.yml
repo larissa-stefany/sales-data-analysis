@@ -1,0 +1,45 @@
+name: Auditoria diária de vendas
+
+on:
+  schedule:
+    # 10:17 UTC = 07:17 em Brasília (UTC-3)
+    - cron: "17 10 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: auditoria-diaria-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  registrar-auditoria:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Executar auditoria de qualidade
+        run: python src/daily_audit.py
+
+      - name: Publicar commit do relatório diário
+        shell: bash
+        run: |
+          git add reports/daily/
+          if git diff --cached --quiet; then
+            echo "Nenhuma mudança real no relatório: sem novo commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "ci: registrar auditoria diária de vendas $(TZ=America/Sao_Paulo date +%F)"
+          git push
