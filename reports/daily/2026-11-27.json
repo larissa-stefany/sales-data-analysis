@@ -1,0 +1,23 @@
+{
+  "base_mudou_desde_relatorio_anterior": false,
+  "data_verificacao_brasilia": "2026-11-27",
+  "metricas": {
+    "faturamento_simulado_valido_brl": "99078.60",
+    "itens_validos_somados": 122,
+    "pedidos_distintos": 50,
+    "registros": 50
+  },
+  "nota": "Auditoria diária automatizada; novo relatório não significa novo desenvolvimento. As métricas descrevem apenas dados sintéticos versionados.",
+  "origem": "data/vendas.csv (base sintética, para estudo)",
+  "sha256_base": "fba7a2ff08b1f7653cbd8c727819300be129a63688693b88b094ef6fa381260b",
+  "status_qualidade": "aprovado",
+  "verificacoes": {
+    "celulas_vazias": 0,
+    "colunas_obrigatorias_ausentes": [],
+    "datas_invalidas": 0,
+    "linhas_duplicadas": 0,
+    "pedidos_duplicados": 0,
+    "precos_invalidos": 0,
+    "quantidades_invalidas": 0
+  }
+}
